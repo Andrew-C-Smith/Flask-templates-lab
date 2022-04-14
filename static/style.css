@@ -1,0 +1,16 @@
+body {
+    font-family: "Rubik", sans-serif;
+    color: white;
+    background-color: #615d6c;
+    font-weight: normal;
+    font-style: normal;
+    margin-right: 20%;
+    margin-left: 20%;
+    text-align: center;
+    border: 20px;
+}
+
+H1{
+    background-color: black;
+}
+

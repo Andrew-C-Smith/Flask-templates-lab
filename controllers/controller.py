@@ -28,8 +28,8 @@ def add_events():
     # print(task_description)
     return render_template('index.html',title='home',events=events) #renders return on index page
 
-@app.route('/events/delete/<index>,methods=['POST'])
-def delete_event():
-    print(request.form
-    name_of_event = request.form["name_of_event"]
-    return render_template('index.html',title='home',events=events)
+# @app.route('/events/delete/<index>,methods=['POST'])
+# def delete_event():
+#     print(request.form
+#     name_of_event = request.form["name_of_event"]
+#     return render_template('index.html',title='home',events=events)
