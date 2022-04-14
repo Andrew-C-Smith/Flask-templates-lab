@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - Events list</title>
+</head>
+<body>
+    <h1>My Events List!</h1>
+
+<!--  lets put input form here -->
+<form action="/addevents" method="post"> <!-- ADDED --> <!-- must match controller route /addtasks -->
+  <label for="date">Date</label>
+  <input type="date" name="dates" id="dates">   
+  <label for="name of event">Name of event</label>
+  <input type="text" name="name_of_event" id="name_of_event">
+  <label for="number of guests">Number of guests</label>
+  <input type="text" name="num_of_guests" id="num_of_guests"> 
+  <label for="room location">Room Location</label>
+  <input type="text" name="room_location" id="room_location"> 
+  <label for="description">Description</label>
+  <input type="text" name="description" id="description"> 
+  <label for="recurring">Recurring</label>
+  <input type="checkbox" name="recurring" id="recurring" value="True"> 
+  <input type="hidden" name="recurring" id="recurringHidden" value="False"> 
+  <input type="submit" value="Add Event">
+</form>
+
+  {% for event in events %}  
+    <div>
+      <p>
+        {{ event.name_of_event }}: <b>{{ event.description }}</b> 
+        
+        {% if event.recurring == "True"%}
+        <span>&#9989</span>
+        {% endif %}
+        
+      </p>
+    </div>
+  {% endfor %}
+    
+</body>
+</html>
