@@ -11,19 +11,29 @@
     <h1>My Events List!</h1>
 
 <!--  lets put input form here -->
-<form action="/addevents" method="post" > <!-- ADDED --> <!-- must match controller route /addtasks -->
+<form action="/addevents" method="post" class="form"> <!-- ADDED --> <!-- must match controller route /addtasks -->
+    <br>
+  <br>
   <label for="date">Date</label>
   <input type="date" name="dates" id="dates">   
+  <br>
+  <br>
   <label for="name of event">Name of event</label>
-  <input type="text" name="name_of_event" id="name_of_event">
+  <input type="text" name="name_of_event" id="name_of_event" >
+  <br>
+  <br>
   <label for="number of guests">Number of guests</label>
   <input type="text" name="num_of_guests" id="num_of_guests"> 
   <br>
   <br>
   <label for="room location">Room Location</label>
   <input type="text" name="room_location" id="room_location"> 
+  <br>
+  <br>
   <label for="description">Description</label>
   <input type="text" name="description" id="description"> 
+  <br>
+  <br>
   <label for="recurring">Recurring</label>
   <input type="checkbox" name="recurring" id="recurring" value="True"> 
   <input type="hidden" name="recurring" id="recurringHidden" value="False"> 
